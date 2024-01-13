@@ -94,3 +94,6 @@ target/
 data/*/*
 models/*
 !.gitkeep
+
+# My ignore 
+postgreSQL/*

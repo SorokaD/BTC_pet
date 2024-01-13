@@ -1,0 +1,13 @@
+
+'first key'
+API key:
+rlXeaf6Y3BrVjRv4yT
+API secret:
+aUruof7bLRGyQvOEWweqLVdyTLqUbAxlPXZq
+
+https://testnet.bybit.com
+'first test key'
+API key:
+o3p8S47W4NBn4YbKms
+API secret:
+pVYgvgsJI788V3cVqkaGP2Z3ZN4Q7AlIrMUD
