@@ -3,3 +3,4 @@
 - docker-compose.yaml was copied from Airflow official page.
 - mkdir -p ./dags ./logs ./plugins ./config
 - docker compose up airflow-init
+- in browser localhost:8080
