@@ -1,0 +1,83 @@
+# swagger.yml
+
+openapi: 3.0.0
+info:
+  title: "WebService REST API"
+  description: "An API for credit scoring"
+  version: "1.0.0"
+
+servers:
+  - url: "http://0.0.0.0:8000/api"
+
+paths:
+  /scoring:
+    post:
+      operationId: "script.get_score"
+      tags:
+        - "scoring"
+      summary: "Get scoring score"
+      requestBody:
+        description: "Data for scoring"
+        required: True
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                a1:
+                  type: integer
+                a2:
+                  type: string
+                a3:
+                  type: integer
+                a4:
+                  type: integer
+                a5:
+                  type: string
+                a6:
+                  type: string
+                a7:
+                  type: string
+                a8:
+                  type: integer
+                a9:
+                  type: integer
+                a10:
+                  type: integer
+                a11:
+                  type: integer
+                a12:
+                  type: integer
+                a13:
+                  type: integer
+                a14:
+                  type: integer
+                a15:
+                  type: integer
+                a16:
+                  type: integer
+                a17:
+                  type: integer
+                a18:
+                  type: integer
+                a19:
+                  type: integer
+                a20:
+                  type: number
+                a21:
+                  type: boolean
+                a22:
+                  type: integer
+                a23:
+                  type: number
+                a24:
+                  type: number
+                a25:
+                  type: number
+                a27:
+                  type: integer
+                a28:
+                  type: string
+      responses:
+        "200":
+          description: "Successfully get scoring score"

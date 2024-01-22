@@ -1,0 +1,26 @@
+# первый слой - python на ОС alpine3.18
+FROM python:3.11-alpine3.18
+
+# задаются значения переменных окружения, 
+# чтобы python не использовал буферизацию ввода-вывода 
+# и не создавал скомпилированные файлы для ускорения запуска
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+#RUN apt-get update -y
+
+# задает рабочую директорию контейнера
+WORKDIR /usr/src/app
+
+# задает кодировку
+ENV LANG C.UTF-8
+
+COPY requirements.txt ./
+# устанавливает зависимости python-приложения из файла requirements.txt
+RUN pip install -r requirements.txt
+
+# копирует проект
+COPY . .
+
+# запускает исполняемый .py файл
+CMD [ "python", "./rest_api.py"] 

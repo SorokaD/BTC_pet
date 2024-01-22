@@ -1,0 +1,29 @@
+# первый слой - python на ОС alpine3.18
+FROM python:3.11-alpine3.18
+
+# задаются значения переменных окружения, 
+# чтобы python не использовал буферизацию ввода-вывода 
+# и не создавал скомпилированные файлы для ускорения запуска
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+#RUN apt-get update -y
+
+# задает рабочую директорию контейнера
+WORKDIR /usr/src/app
+
+# задает кодировку
+ENV LANG C.UTF-8
+
+COPY requirements.txt ./
+# устанавливает зависимости python-приложения из файла requirements.txt
+RUN pip install --upgrade pip
+# работает "psycopg2-binary" потому что https://dnmtechs.com/error-pg_config-executable-not-found-when-installing-psycopg2-on-alpine-in-docker/#:~:text=The%20error%20%E2%80%9Cpg_config%20executable%20not,package%2C%20which%20includes%20pre%2Dbuilt%20binaries
+RUN pip install psycopg2-binary 
+RUN pip install -r requirements.txt
+
+# копирует проект
+COPY . .
+
+# запускает исполняемый .py файл
+CMD [ "python", "./rest_api.py"]

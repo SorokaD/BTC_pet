@@ -1,0 +1,5 @@
+pandas
+scipy
+psycopg2-binary
+SQLAlchemy
+catboost
