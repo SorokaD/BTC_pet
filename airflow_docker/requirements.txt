@@ -1,1 +1,5 @@
 pandas
+pybit
+psycopg2
+SQLAlchemy
+

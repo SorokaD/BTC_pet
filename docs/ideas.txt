@@ -1,0 +1,1 @@
+1. Use feature 'the price gradient', like dinamic ot speed of change a cost. (from book Hands-On Machine Learning for Algorithmic Trading)

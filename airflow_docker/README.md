@@ -5,3 +5,4 @@
 - __Initialize the database:__ docker compose up airflow-init
 - __Running Airflow:__ docker compose up
 - __In browser:__ localhost:8080
+- __Default:__ login: __airflow__ password: __airflow__
